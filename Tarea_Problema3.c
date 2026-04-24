@@ -12,6 +12,7 @@ int main() {
     for (i = 0; i < TAM1; i++) {
         printf("v1[%d]: ", i);
         scanf("%d", &v1[i]);
+        // Primero lo guardas en una variable y despues 
     }
 
     printf("\nIntroduce los %d elementos del segundo vector:\n", TAM2);
