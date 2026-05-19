@@ -1,22 +1,26 @@
 // Desafiio Numero 1
 # include <stdio.h>
-int v, v1, n, cont, tam;
+int v, v1, v2, n, cont, tam, d;
 char c;
 
 void main () {
   printf ("Numeros comprendidos entre el 1 y el 1000.\n");
-  printf ("Grupo predefinido es de 20 \n");
-  v=20, v1=1, tam=0;
-  while (tam!=1 && v1<=1000) {
-      for (cont=v1; cont<=v; cont++) {
+  printf ("Que cantidad de grupos deaseas imprimir ? \n");
+  scanf ("%d", &v);
+  printf ("Cual es tu primer limite ? \n");
+  scanf ("%d", &v1);
+  printf ("Cual es tu segundo limite ? \n");
+  scanf ("%d", &v2);
+  tam=0;
+  while (tam!=1 && v1<=v2) {
+      for (cont=0; cont<v; cont++) {
         printf ("%d ,",v1);
-        ++v1; }
-    v1=v+1;
-    v=(v+20);
+        ++v1; 
+      }
     printf ("\n");
-    printf ("Desea imrpimri otros diez valores? S/N \n");
-    scanf (" %c",c);
-    if (c=='s'&& c=='s')
+    printf ("Desea imrpimri otro grupo? S/N \n");
+    scanf (" %c", &c);
+    if (c!='s'|| c!='s')
       tam=1;
+      }
   }
-}
